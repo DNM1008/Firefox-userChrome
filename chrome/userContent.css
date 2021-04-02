@@ -3,6 +3,12 @@
         color: #fff !important ;
         text-shadow: 2px 2px 2px #222 !important ;
     }
+    .search-wrapper .logo-and-wordmark .logo {
+            background: none !important;
+        }
+        .search-wrapper .logo-and-wordmark .wordmark {
+            background: none !important;
+        }
  
     body::before {
         content: "" ;
