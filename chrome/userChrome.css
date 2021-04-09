@@ -40,18 +40,19 @@
 /*** BEGIN Auto hide/show tab bar and address bar on mouse hover ***/
   /* Hide the tab bar automatically, leave a 10 pixel high bar for the mouse to trigger, also for consistency, make all elements of the navigator toolbox transparent */
     #navigator-toolbox {
-      max-height: 10px;
-      overflow: hidden;
-      transition: ease all 0.5s;
-      opacity: 0!important;
+      max-height: 30px ;
+      overflow: hidden !important;
+      transition: ease all 0s;
+      opacity: 1!important;
     }
   /* Show the rest of the navigation toolbox when the cursor is hovering in the area described above, disable the transparency */
     #navigator-toolbox:hover {
-      max-height: 100vh;
+      max-height:100vh;
       animation: 0s pop-in;
       animation-fill-mode: both;
       animation-delay: 5s;
       opacity: 1!important;
+      
     }
 
     @keyframes pop-in {
@@ -59,3 +60,4 @@
       to {overflow: unset}
     }
 /*** END Auto hide/show tab bar and address bar on mouse hover ***/
+
