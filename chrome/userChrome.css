@@ -73,3 +73,6 @@
 
 /*** END Limit toolbox height and enable scroll to access toolbox ***/
 
+html {
+  scrollbar-width: none;
+}
