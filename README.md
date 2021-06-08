@@ -10,3 +10,5 @@ In "userChrome.css", I disable the url bar enlargement and set the max height of
 * If you still want auto hide/show the toolbox, I still have the code commented out, so you can just uncomment what you want and comment out what you don't want
 
 I found these codes and modified them a while ago, so if you wrote the code and want me to mention you, don't hesitate to contact me
+
+Update: I have tried to move the url bar next to the bookmarks and tabs bar, there are still bugs with resolutions other than 1080p and elements will collide and got pushed out of the window if the window is not big enough
