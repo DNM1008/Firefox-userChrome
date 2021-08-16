@@ -6,7 +6,7 @@
     top: 5px !important;
     left: 0px !important;
     width: 100% !important;
-    padding: 0px !important;
+    padding: -1px !important;
   }
   /* for alternate Density settings */
   [uidensity="compact"] #urlbar[breakout][breakout-extend] {
@@ -55,7 +55,6 @@
       opacity: 1!important;
       
     }
-
     @keyframes pop-in {
       from {overflow: hidden}
       to {overflow: unset}
@@ -65,7 +64,7 @@
 /*** BEGIN Limit toolbox height and disable scroll to access toolbox ***/
   /* Hide the tab bar automatically, disable scrolling on the part of the toolbar that is visible (28 px) and setup so that ctrl + L toggles the full height of the toolbar*/
   #navigator-toolbox {
-    max-height: 28px ;
+    max-height: 0px !important ;
     overflow: hidden !important;
     /* overflow: scroll !important; */
     scrollbar-width: none !important;
@@ -85,10 +84,14 @@
     display: none !important;
   }
   
-
+/* Bookmark bar beneath URL bar, Tabs beneath URL bar */
+.titlebar-buttonbox-container > .titlebar-buttonbox{ height: 100%; }
+ 
+#titlebar{
+  -moz-box-ordinal-group: 2;
+  -moz-appearance: none !important;
+  --tabs-navbar-shadow-size: 0px;
+  }
 
 
 /*** END Limit toolbox height and disable scroll to access toolbox ***/
-
-
-
