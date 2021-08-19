@@ -10,7 +10,7 @@
   }
   /* for alternate Density settings */
   [uidensity="compact"] #urlbar[breakout][breakout-extend] {
-    top: 4px !important;
+    top: 4px !important; /* Push the address bar down so that it looks a bit neater when typing */
   }
   [uidensity="touch"] #urlbar[breakout][breakout-extend] {
     top: 4px !important;
