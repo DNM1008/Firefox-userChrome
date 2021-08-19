@@ -63,6 +63,7 @@
 
 /*** BEGIN Limit toolbox height and disable scroll to access toolbox ***/
   /* Hide the tab bar automatically, disable scrolling on the part of the toolbar that is visible (28 px) and setup so that ctrl + L toggles the full height of the toolbar*/
+  
   #navigator-toolbox {
     max-height: 0px !important ;
     overflow: hidden !important;
@@ -83,15 +84,48 @@
   .titlebar-spacer {
     display: none !important;
   }
-  
-/* Bookmark bar beneath URL bar, Tabs beneath URL bar */
-.titlebar-buttonbox-container > .titlebar-buttonbox{ height: 100%; }
- 
-#titlebar{
-  -moz-box-ordinal-group: 2;
-  -moz-appearance: none !important;
-  --tabs-navbar-shadow-size: 0px;
-  }
 
 
 /*** END Limit toolbox height and disable scroll to access toolbox ***/
+
+/* ADDED 8/10/2021, FIREFOX 91 UPDATE : remove stupid rounded-ness? */
+.tab-background,
+#urlbar-background,
+#searchbar,
+menupopup,
+.menupopup-arrowscrollbox{ border-radius: 0 !important; }
+:root{--arrowpanel-border-radius:0px !important;}
+
+/** BEGIN Bring back Proton **/
+
+.tab-background {
+  border-radius: 0px 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):not([multiselected="true"]) .tab-background {
+  background-color: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+menupopup > menu, menupopup > menuitem {
+  padding-block: 0px !important;
+}
+
+:root {
+  --arrowpanel-menuitem-padding: 0px !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) > .tab-stack > .tab-background {
+  border: 1px solid rgba(130, 130, 130, 0.5) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+  border-left: 1px solid rgba(130, 130, 130, 0.5) !important;
+  border-right: 1px solid rgba(130, 130, 130, 0.5) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+  border-top: 3px solid #3daee9 !important;
+}
+
+/** END Bring back Proton
