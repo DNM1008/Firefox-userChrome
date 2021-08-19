@@ -10,7 +10,7 @@
   }
   /* for alternate Density settings */
   [uidensity="compact"] #urlbar[breakout][breakout-extend] {
-    top: 3px !important;
+    top: 4px !important;
   }
   [uidensity="touch"] #urlbar[breakout][breakout-extend] {
     top: 4px !important;
