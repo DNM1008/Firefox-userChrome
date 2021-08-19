@@ -10,3 +10,8 @@ In "userChrome.css", I hide the tool bar above altogether, you can still access 
 I tried to bring back the old looks, as I found it to be much more aesthetically pleasing than Proton
 
 ## Almost all of the code was either found online or was my edition of code I found online, if you want me to credit you, please get in touch. If you want to use what I have here for any reason, feel free to do so
+
+Below should be how your home page looks like
+* When the address bar is focused: ![image](https://user-images.githubusercontent.com/54259825/130071482-db7c70c5-f1a4-43b7-94c5-17a7f8233bac.png)
+* When the address bar is unfocused: ![image](https://user-images.githubusercontent.com/54259825/130071569-1111bf22-012c-4964-85f5-132356099fb9.png)
+
