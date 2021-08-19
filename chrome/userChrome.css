@@ -96,7 +96,7 @@ menupopup,
 .menupopup-arrowscrollbox{ border-radius: 0 !important; }
 :root{--arrowpanel-border-radius:0px !important;}
 
-/** BEGIN Bring back Proton **/
+/** BEGIN Bring back old looks **/
 
 .tab-background {
   border-radius: 0px 0px !important;
@@ -128,4 +128,4 @@ menupopup > menu, menupopup > menuitem {
   border-top: 3px solid #3daee9 !important;
 }
 
-/** END Bring back Proton
+/** END Bring back old looks
