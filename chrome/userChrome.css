@@ -65,9 +65,9 @@
   /* Hide the tab bar automatically, disable scrolling on the part of the toolbar that is visible (28 px) and setup so that ctrl + L toggles the full height of the toolbar*/
   
   #navigator-toolbox {
-    max-height: 0px !important ;
-    overflow: hidden !important;
-    /* overflow: scroll !important; */
+    max-height: 0px  !important ;
+    overflow: scroll;
+    /* overflow: scroll !important; */ 
     scrollbar-width: none !important;
     margin-top: -3px !important;
  
@@ -79,8 +79,8 @@
     animation-fill-mode: both;
     animation-delay: 5s;
     opacity: 1!important;
-    overflow: revert !important;
-    max-height: 62px !important;
+    overflow:unset !important;
+    max-height: 60px !important;
   }
   .titlebar-spacer {
     display: none !important;
@@ -105,11 +105,11 @@ menupopup,
 }
 
 .tabbrowser-tab:not([selected="true"]):not([multiselected="true"]) .tab-background {
-  background-color: color-mix(in srgb, currentColor 5%, transparent);
+  background-color: #2B2A33;
 }
 
 menupopup > menu, menupopup > menuitem {
-  padding-block: 0px !important;
+  padding-block: -1px !important;
 }
 
 :root {
@@ -117,16 +117,25 @@ menupopup > menu, menupopup > menuitem {
 }
 
 .tabbrowser-tab:not([selected="true"]) > .tab-stack > .tab-background {
-  border: 1px solid rgba(130, 130, 130, 0.5) !important;
+  border: none !important;
 }
 
 .tabbrowser-tab[selected="true"] .tab-background {
-  border-left: 1px solid rgba(130, 130, 130, 0.5) !important;
-  border-right: 1px solid rgba(130, 130, 130, 0.5) !important;
+  border-left: 0px solid rgba(130, 130, 130, 0.5) !important;
+  border-right: 0px solid rgba(130, 130, 130, 0.5) !important;
 }
 
 .tabbrowser-tab[selected="true"] .tab-background {
-  border-top: 3px solid #3daee9 !important;
+  border-top: 2px solid #3daee9 !important;
 }
+:root {
+  --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
+  --tab-min-height: 25px !important;
+ }
+ :root #tabbrowser-tabs {
+  --tab-min-height: 25px !important;
+ }
+ #TabsToolbar {height: var(--tab-min-height) !important;}
+ #PersonalToolbar {height: 25px !important;}
 
 /** END Bring back old looks
