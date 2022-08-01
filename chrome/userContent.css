@@ -13,19 +13,25 @@
         .search-wrapper .logo-and-wordmark .wordmark {
             background: none !important;
         }
- 
+       
     body::before {
         content: "" ;
         z-index: -1 ;
         position: fixed ;
         top: 0 ;
         left: 0 ;
-        background: #f9a no-repeat url(img/Ambitious\ but\ rubbish.jpg) center ;
+       
+        background: #f9a no-repeat url(img/Ambitious\ but\ rubbish.jpg)center ;
         background-size: cover ;
         width: 100vw ;
         height: 100vh ;
     }
 }
+@media only screen and (max-width: 1080px){
+    body::before{
+        background: #f9a no-repeat url(img/League\ of\ Legends\ \(6\).jpg)center ;
+    }
+} 
 /*** END Set homepage wallpaper ***/
 
 /*** BEGIN Hide scrollbar ***/
