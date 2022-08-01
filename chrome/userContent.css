@@ -21,7 +21,7 @@
         top: 0 ;
         left: 0 ;
        
-        background: #f9a no-repeat url(img/Ambitious\ but\ rubbish.jpg)center ;
+        background: #f9a no-repeat url(img/Ghostblade.jpg)center ;
         background-size: cover ;
         width: 100vw ;
         height: 100vh ;
@@ -29,7 +29,16 @@
 }
 @media only screen and (max-width: 1080px){
     body::before{
-        background: #f9a no-repeat url(img/League\ of\ Legends\ \(6\).jpg)center ;
+        content: "" ;
+        z-index: -1 ;
+        position: fixed ;
+        background: #f9a no-repeat url(img/Warrior.jpg);
+        background-size: cover;
+        min-width: 100%;
+        top: 0;
+        left: 0;
+        
+        
     }
 } 
 /*** END Set homepage wallpaper ***/
