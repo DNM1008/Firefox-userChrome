@@ -15,7 +15,8 @@
 * If it's vertical (less than 1080px wide): ![image](https://user-images.githubusercontent.com/54259825/197147567-77cda598-28ae-47d7-9c22-58f143b9f1f0.png)
 
 
-* Now you should have search suggestions: ![suggestion](https://user-images.githubusercontent.com/54259825/182157386-b1319fe7-fd98-4eca-9321-c34e6d48269a.jpg)
+* Now you should have search suggestions: ![image](https://user-images.githubusercontent.com/54259825/197147868-6bcec509-2c13-4a4c-aa78-6fa47b43f76a.png)
+
 
 # Disclaimer
 **Almost all of the code was either found online or was my edition of code I found online, if you want me to credit you, please get in touch. If you want to use what I have here for any reason, feel free to do so.**
