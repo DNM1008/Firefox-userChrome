@@ -1,141 +1,183 @@
-/*** BEGIN Override URL bar enlargement ***/
-
-  /* Compute new position, width, and padding */
-
-  #urlbar[breakout][breakout-extend] {
+#urlbar[breakout][breakout-extend] {
     top: 6px !important;
-    left: 0px !important;
+    left: 0 !important;
     width: 100% !important;
-    padding: 0px !important;
-  }
-  /* for alternate Density settings */
-  [uidensity="compact"] #urlbar[breakout][breakout-extend] {
-    top: 6px !important; /* Push the address bar down so that it looks a bit neater when typing */
-  }
-  [uidensity="touch"] #urlbar[breakout][breakout-extend] {
-    top: 4px !important;
-  }
+    padding: 0 !important
+}
 
-  /* Prevent shift of URL bar contents */
+[uidensity=compact] #urlbar[breakout][breakout-extend] {
+    top: 6px !important
+}
 
-  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+
+
+#urlbar[breakout][breakout-extend]>#urlbar-input-container {
     height: var(--urlbar-height) !important;
-    padding: 0 !important;
-  }
+    padding: 0 !important
+}
 
-  /* Do not animate */
+#urlbar[breakout][breakout-extend]>#urlbar-background {
+    animation: none !important;
+    box-shadow: none !important
+}
 
-  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    animation: none !important;;
-  }
-
-  /* Remove shadows */
-
-  #urlbar[breakout][breakout-extend] > #urlbar-background {
-    box-shadow: none !important;
-  }
-
-/*** END Override URL bar enlargement ***/
-
-/*** BEGIN Auto hide/show tab bar and address bar on mouse hover ***/
-  /* Hide the tab bar automatically, leave a 10 pixel high bar for the mouse to trigger, also for consistency, make all elements of the navigator toolbox transparent */
-    /*#navigator-toolbox {
-      max-height: 28px ;
-      overflow: scroll !important;
-      scrollbar-width: none !important;
-      transition: ease all 0s;
-      opacity: 1!important; 
-    }
-  /* Show the rest of the navigation toolbox when the cursor is hovering in the area described above, disable the transparency */
-    /*#navigator-toolbox:hover {
-      max-height:100vh;
-      animation: 0s pop-in;
-      animation-fill-mode: both;
-      animation-delay: 5s;
-      opacity: 1!important;
-      
-    }
-    @keyframes pop-in {
-      from {overflow: hidden}
-      to {overflow: unset}
-    }
-/*** END Auto hide/show tab bar and address bar on mouse hover ***/
-
-/*** BEGIN Limit toolbox height and disable scroll to access toolbox ***/
-  /* Hide the tab bar automatically, disable scrolling on the part of the toolbar that is visible (28 px) and setup so that ctrl + L toggles the full height of the toolbar*/
-  
-  #navigator-toolbox {
-    max-height: 0px  !important ;
-    overflow: scroll;
-    /* overflow: scroll !important; */ 
-    scrollbar-width: none !important;
-    margin-top: -3px !important;
- 
-  }
-  #navigator-toolbox:focus-within
-  {
+menupopup {
+	-moz-appearance: none !important;
+	padding: 8px 2px 8px 2px !important;
+	background-color: #24273a !important;
+	border: 1px #A0A0A0 solid !important;
+	min-width: 280px !important;
+}
+menuseparator {
+	-moz-appearance: none !important;
+	border: none !important;
+	padding: .5px 0px .5px 0px !important;
+	margin: 4px 8px 4px 8px !important;
+	background-color: #808080 !important;
+}
+menuitem, menu {
+	-moz-appearance: none !important;
+	color: #b1bce2 !important;
+	padding: 7.5px 0px 7.5px 0px !important;
+}
+menuitem[disabled="true"], menuitem[disabled="true"] > .menu-text {
+	color: gray !important;
+}
+menuitem:hover, menu:hover, menu[open="true"], menuitem[_moz-menuactive="true"]	 {
+	-moz-appearance: none !important;
+	padding: 7.5px 0px 7.5px 0px !important;
+	background-color: #5b6078 !important;
+}
+menugroup {
+	padding: 0px !important;
+	background-color: transparent !important;
+}
+menuitem > .menu-text, menuitem > .menu-iconic-text {
+	color:#cad3f5 !important;
+}
+menuitem[type="checkbox"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+menuitem[type="radio"] {
+	padding-left: 8px !important;
+	padding-top: 6.5px !important;
+	padding-bottom: 6.5px !important;
+}
+menuitem[type="checkbox"] > .menu-iconic-text, menuitem[type="radio"] > .menu-iconic-text {
+	padding-left: 5px !important;
+}
+menuitem[checked="true"][type="checkbox"] > .menu-iconic-left {
+	padding: 7px 0px 0px 0px !important;
+	border: solid white;
+	border-width: 0 0 2px 2px;
+	transform: rotate(-45deg) scale(.75);
+	margin-bottom: 4px !important;
+}
+menuitem[checked="true"][type="radio"] > .menu-iconic-left {
+	padding: 1px !important;
+	border: solid white;
+	height: 17px !important;
+	border-radius: 100%;
+	background: white;
+	transform: scale(.5); 
+}
+menucaption {
+	background-color: transparent !important;
+	color: white !important;
+}
+#ContentSelectDropdown > menupopup {
+	background-image: none !important;
+}
+#ContentSelectDropdown {
+	padding: 0px !important;
+}
+menulist {
+	-moz-appearance: none !important;
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #666666 !important;
+	background-color: transparent !important;
+}
+menulist:hover {
+	padding: 4px 4px 4px 4px !important;
+	border: 2px solid #999999 !important;
+	background-color: transparent !important;
+}
+menulist[open="true"]  {
+	border: 2px solid #666666 !important;
+	background-color: #333333 !important;
+}
+#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
+	padding: 0px !important;
+}
+.menu-iconic-left {
+	-moz-appearance: none !important;
+	padding: 0px 5px 0px 9px !important;
+}
+.menu-right {
+	-moz-appearance: none !important;
+	padding: 7.5px !important;
+	margin-right: 6px !important;
+	color: white !important;
+	border: solid white;
+	border-width: 0 2px 2px 0px;
+	transform: rotate(-45deg) scale(.55);
+}
+tooltip {
+	-moz-appearance: none !important;
+	color: white !important;
+	background-color: #2B2B2B !important;
+	border: 1px solid #767676 !important;
+	padding: 6.5px !important;
+}
     
-    animation: 0s none;
-    animation-fill-mode: both;
-    animation-delay: 5s;
-    opacity: 1!important;
-    overflow:unset !important;
-    max-height: 60px !important;
-  }
-  .titlebar-spacer {
-    display: none !important;
-  }
 
 
-/*** END Limit toolbox height and disable scroll to access toolbox ***/
+.titlebar-spacer {
+    display: none !important
+}
 
-/* ADDED 8/10/2021, FIREFOX 91 UPDATE : remove stupid rounded-ness? */
 .tab-background,
 #urlbar-background,
 #searchbar,
 menupopup,
-.menupopup-arrowscrollbox{ border-radius: 0 !important; }
-:root{--arrowpanel-border-radius:0px !important;}
+.menupopup-arrowscrollbox {
+    border-radius: 0 !important
+}
 
-/** BEGIN Bring back old looks **/
+:root {
+    --arrowpanel-border-radius: 0 !important;
+    --arrowpanel-menuitem-padding: 0 !important;
+   
+    --tab-min-height: 25px !important
+}
 
 .tab-background {
-  border-radius: 0px 0px !important;
-  margin-bottom: 0px !important;
+    border-radius: 0 0 !important;
+    margin-bottom: 0 !important
 }
 
-.tabbrowser-tab:not([selected="true"]):not([multiselected="true"]) .tab-background {
-  background-color: #2B2A33;
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+    background-color: #2b2a33
 }
 
-menupopup > menu, menupopup > menuitem {
-  padding-block: -1px !important;
+menupopup>menu,
+menupopup>menuitem {
+    padding-block: -1px !important
 }
 
-:root {
-  --arrowpanel-menuitem-padding: 0px !important;
+.tabbrowser-tab:not([selected=true])>.tab-stack>.tab-background {
+    border: none !important
 }
 
-.tabbrowser-tab:not([selected="true"]) > .tab-stack > .tab-background {
-  border: none !important;
+.tabbrowser-tab[selected=true] .tab-background {
+    border-left: 0 solid rgba(130, 130, 130, .5) !important;
+    border-right: 0 solid rgba(130, 130, 130, .5) !important;
+    border-top: 2px solid #3daee9 !important
 }
 
-.tabbrowser-tab[selected="true"] .tab-background {
-  border-left: 0px solid rgba(130, 130, 130, 0.5) !important;
-  border-right: 0px solid rgba(130, 130, 130, 0.5) !important;
+:root #tabbrowser-tabs {
+    --tab-min-height: 25px !important
 }
 
-.tabbrowser-tab[selected="true"] .tab-background {
-  border-top: 2px solid #3daee9 !important;
-}
-:root {
-  --tab-toolbar-navbar-overlap: 0px !important; /* fix for full screen mode */
-  --tab-min-height: 25px !important;
- }
- :root #tabbrowser-tabs {
-  --tab-min-height: 25px !important;
- }
- #TabsToolbar {height: var(--tab-min-height) !important;}
- #PersonalToolbar {height: 25px !important;}
-
-/** END Bring back old looks

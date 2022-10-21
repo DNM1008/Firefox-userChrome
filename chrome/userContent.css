@@ -16,22 +16,22 @@
        
     body::before {
         content: "" ;
-        z-index: -1 ;
+        
         position: fixed ;
         top: 0 ;
         left: 0 ;
        
-        background: #f9a no-repeat url(img/Ghostblade.jpg)center ;
+        background: #f9a no-repeat url(img/Catppuccin.jpg)center ;
         background-size: cover ;
         width: 100vw ;
         height: 100vh ;
     }
 }
-@media only screen and (max-width: 1080px){
+@media only screen and (max-device-width: 1080px) {
     body::before{
         content: "" ;
-        z-index: -1 ;
-        position: fixed ;
+        z-index: -2 !important;
+        
         background: #f9a no-repeat url(img/Warrior.jpg);
         background-size: cover;
         min-width: 100%;
@@ -41,6 +41,7 @@
         
     }
 } 
+
 /*** END Set homepage wallpaper ***/
 
 /*** BEGIN Hide scrollbar ***/
