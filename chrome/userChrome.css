@@ -21,130 +21,8 @@
     box-shadow: none !important
 }
 
-menupopup {
-	-moz-appearance: none !important;
-	padding: 8px 2px 8px 2px !important;
-	background-color: #24273a !important;
-	border: 1px #A0A0A0 solid !important;
-	min-width: 280px !important;
-}
-menuseparator {
-	-moz-appearance: none !important;
-	border: none !important;
-	padding: .5px 0px .5px 0px !important;
-	margin: 4px 8px 4px 8px !important;
-	background-color: #808080 !important;
-}
-menuitem, menu {
-	-moz-appearance: none !important;
-	color: #b1bce2 !important;
-	padding: 7.5px 0px 7.5px 0px !important;
-}
-menuitem[disabled="true"], menuitem[disabled="true"] > .menu-text {
-	color: gray !important;
-}
-menuitem:hover, menu:hover, menu[open="true"], menuitem[_moz-menuactive="true"]	 {
-	-moz-appearance: none !important;
-	padding: 7.5px 0px 7.5px 0px !important;
-	background-color: #5b6078 !important;
-}
-menugroup {
-	padding: 0px !important;
-	background-color: transparent !important;
-}
-menuitem > .menu-text, menuitem > .menu-iconic-text {
-	color:#cad3f5 !important;
-}
-menuitem[type="checkbox"] {
-	padding-left: 8px !important;
-	padding-top: 6.5px !important;
-	padding-bottom: 6.5px !important;
-}
-menuitem[type="radio"] {
-	padding-left: 8px !important;
-	padding-top: 6.5px !important;
-	padding-bottom: 6.5px !important;
-}
-menuitem[type="checkbox"] > .menu-iconic-text, menuitem[type="radio"] > .menu-iconic-text {
-	padding-left: 5px !important;
-}
-menuitem[checked="true"][type="checkbox"] > .menu-iconic-left {
-	padding: 7px 0px 0px 0px !important;
-	border: solid white;
-	border-width: 0 0 2px 2px;
-	transform: rotate(-45deg) scale(.75);
-	margin-bottom: 4px !important;
-}
-menuitem[checked="true"][type="radio"] > .menu-iconic-left {
-	padding: 1px !important;
-	border: solid white;
-	height: 17px !important;
-	border-radius: 100%;
-	background: white;
-	transform: scale(.5); 
-}
-menucaption {
-	background-color: transparent !important;
-	color: white !important;
-}
-#ContentSelectDropdown > menupopup {
-	background-image: none !important;
-}
-#ContentSelectDropdown {
-	padding: 0px !important;
-}
-menulist {
-	-moz-appearance: none !important;
-	padding: 4px 4px 4px 4px !important;
-	border: 2px solid #666666 !important;
-	background-color: transparent !important;
-}
-menulist:hover {
-	padding: 4px 4px 4px 4px !important;
-	border: 2px solid #999999 !important;
-	background-color: transparent !important;
-}
-menulist[open="true"]  {
-	border: 2px solid #666666 !important;
-	background-color: #333333 !important;
-}
-#context-back > .menu-iconic-left, #context-forward > .menu-iconic-left, #context-reload > .menu-iconic-left, #context-stop > .menu-iconic-left, #context-bookmarkpage > .menu-iconic-left {
-	padding: 0px !important;
-}
-.menu-iconic-left {
-	-moz-appearance: none !important;
-	padding: 0px 5px 0px 9px !important;
-}
-.menu-right {
-	-moz-appearance: none !important;
-	padding: 7.5px !important;
-	margin-right: 6px !important;
-	color: white !important;
-	border: solid white;
-	border-width: 0 2px 2px 0px;
-	transform: rotate(-45deg) scale(.55);
-}
-tooltip {
-	-moz-appearance: none !important;
-	color: white !important;
-	background-color: #2B2B2B !important;
-	border: 1px solid #767676 !important;
-	padding: 6.5px !important;
-}
-    
 
 
-.titlebar-spacer {
-    display: none !important
-}
-
-.tab-background,
-#urlbar-background,
-#searchbar,
-menupopup,
-.menupopup-arrowscrollbox {
-    border-radius: 0 !important
-}
 
 :root {
     --arrowpanel-border-radius: 0 !important;
@@ -159,24 +37,275 @@ menupopup,
 }
 
 .tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
-    background-color: #2b2a33
+    background-color: #24273a
 }
 
-menupopup>menu,
-menupopup>menuitem {
-    padding-block: -1px !important
-}
 
-.tabbrowser-tab:not([selected=true])>.tab-stack>.tab-background {
-    border: none !important
-}
-
-.tabbrowser-tab[selected=true] .tab-background {
-    border-left: 0 solid rgba(130, 130, 130, .5) !important;
-    border-right: 0 solid rgba(130, 130, 130, .5) !important;
-    border-top: 2px solid #3daee9 !important
-}
 
 :root #tabbrowser-tabs {
     --tab-min-height: 25px !important
 }
+
+
+
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/centered_tab_label.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+.tab-label-container{
+    display: grid;
+    justify-content: safe center;
+    align-items: safe center;
+  }
+  
+  .tab-secondary-label{
+    -moz-box-pack: center;
+  }
+  
+  .tab-label,
+  .tab-secondary-label{ overflow: hidden }
+  
+  .tabbrowser-tab[selected]:not(:hover) .tab-label-container:not([labeldirection="rtl"]),
+  #tabbrowser-tabs:not([closebuttons="activetab"]) .tabbrowser-tab:not(:hover,[pinned]) .tab-label-container:not([labeldirection="rtl"]){
+    margin-inline-end: 7px;
+  }
+
+
+ /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/combined_tabs_and_main_toolbars.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Combines tabs toolbar and nav-bar in such a way that opening new tabs will reserve
+   space from nav-bar. Only pinned tabs and the selected tab will be visible, all other tabs need to be accessed via alltabs-button or shortcut keys */
+
+/* You WILL NEED either autohide_menubar.css or overlay_menubar.css with this or use custom css that does something similar */  
+
+#navigator-toolbox{
+    --uc-urlbar-min-width: 50vw; /* minimum width for opened urlbar */
+  }
+  
+  #toolbar-menubar[autohide="true"] > .titlebar-buttonbox-container{ display: none !important; }
+  #toolbar-menubar{ left:0 }
+  
+  @supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
+    #TabsToolbar > .titlebar-buttonbox-container{
+      position: fixed;
+      display: block;
+      left: 0px;
+      z-index: 1;
+    }
+    :root[tabsintitlebar="true"] #nav-bar{ padding-inline: calc(var(--uc-hide-window-control-space,1) * 96px + 20px) 0px !important; }
+    
+    @media (-moz-platform: windows-win10),(-moz-os-version: windows-win10){
+      :root[tabsintitlebar="true"] #nav-bar{ padding-left: calc(var(--uc-hide-window-control-space,1) * 134px + 20px) !important; }
+    }
+    #toolbar-menubar[autohide="true"] + #TabsToolbar .titlebar-buttonbox{ -moz-box-direction: reverse }
+  }
+  
+  #navigator-toolbox{ --tab-min-height: 40px }
+  :root[uidensity="compact"] #navigator-toolbox{ --tab-min-height: 32px }
+  
+  #navigator-toolbox{
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+  }
+  
+  #titlebar{
+    -moz-appearance: none !important;
+    flex-grow: 1;
+  }
+   
+  .scrollbox-clip[orient="horizontal"]{
+    contain: none !important;
+  }
+  :root[tabsintitlebar="true"] #nav-bar{ padding-left: 20px }
+  
+  #nav-bar,
+  #PersonalToolbar{ flex-grow: 1000; }
+  
+  /* Fx <108 only, this margin on bookmarks toolbar makes absolutely no sense, but it won't work properly without it.  */
+  /*
+  .browser-toolbar.chromeclass-directories:not([collapsed="true"]){
+    min-width: 100vw !important;
+    margin-bottom: calc(2 * var(--tab-block-margin) + var(--tab-min-height));
+  }
+  */
+  /* reduce urlbar minimum width. If urlbar would become narrower then main-toolbar wraps to second line */
+  #urlbar-container{ min-width: 250px !important; }
+  
+  #TabsToolbar > .titlebar-spacer[type="pre-tabs"]{ display: none !important; }
+  
+  .tabbrowser-tab{ margin-inline-start: 0 !important }
+  
+  /* Make opened urlbar overlay the toolbar */
+  #urlbar[open]:focus-within{ min-width: var(--uc-urlbar-min-width,none) !important; }
+  
+  /* Set this pref if you want unpinned tabs to become hidden unless selected */
+  @supports -moz-bool-pref("userchrome.hide-unpinned-tabs.enabled"){
+    #alltabs-button{ display: -moz-box !important }
+    .tabbrowser-tab:not([pinned]):not([selected]){ visibility: collapse }
+  }
+ /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/drag_window_from_urlbar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Makes the window draggable from urlbar when urlbar is not focused. This means you can't click the urlbar text to activate it normally. But right-click works to activate urlbar. */
+
+.urlbar-input-box,#urlbar-input,#urlbar-scheme,#urlbar-container{
+    -moz-window-dragging: drag;
+    cursor: default;
+  }
+  #urlbar-input-container > box,
+  #page-action-buttons,
+  #urlbar-container:focus-within,
+  #urlbar-container:focus-within :is(.urlbar-input-box,#urlbar-input,#urlbar-scheme,#urlbar-container){
+    -moz-window-dragging: no-drag;
+    cursor: auto;
+  }
+
+  /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/navbar_tabs_oneliner.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Make tabs and navbar appear side-by-side tabs on right */
+
+/* Use page_action_buttons_on_hover.css to hide page-action-buttons to save more space for the address */
+
+/*
+urlbar_popup_full_width.css is VERY MUCH recommended for Firefox 71+ because of new urlbar popup
+*/
+
+:root[uidensity="compact"]{
+    --tab-block-margin: 2px !important;
+  }
+  
+  /* Modify these to change relative widths or default height */
+  #navigator-toolbox{
+    --uc-navigationbar-width: 40vw;
+    --uc-toolbar-height: 40px;
+    --uc-urlbar-min-width: 50vw; /* minimum width for opened urlbar */
+  }
+  
+  #scrollbutton-up,
+  #scrollbutton-down{ border-block-width: 2px !important; }
+  
+  /* Override for other densities */
+  :root[uidensity="compact"] #navigator-toolbox{ --uc-toolbar-height: 34px; }
+  :root[uidensity="touch"] #navigator-toolbox{ --uc-toolbar-height: 44px; }
+  
+  /* prevent urlbar overflow on narrow windows */
+  /* Dependent on how many items are in navigation toolbar ADJUST AS NEEDED */
+  @media screen and (max-width: 1500px){
+    #urlbar-container{ min-width:unset !important }
+  }
+  
+  #TabsToolbar{
+    margin-left: var(--uc-navigationbar-width);
+    --tabs-navbar-shadow-size: 0px;
+  }
+  #tabbrowser-tabs{
+    --tab-min-height: calc(var(--uc-toolbar-height) - 2 * var(--tab-block-margin,0px)) !important;
+  }
+  
+  /* This isn't useful when tabs start in the middle of the window */
+  
+  .titlebar-spacer[type="pre-tabs"]{ display: none }
+  
+  #navigator-toolbox > #nav-bar{
+    margin-right:calc(100vw - var(--uc-navigationbar-width));
+    margin-top: calc(0px - var(--uc-toolbar-height));
+  }
+  
+  /* Window drag space  */
+  :root[tabsintitlebar="true"] #nav-bar{ padding-left: 24px !important }
+  
+  /* Rules specific to window controls on right layout */
+  @supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
+    .titlebar-buttonbox-container{ position: fixed; display: block; left: 0px; z-index: 3; }
+    :root[tabsintitlebar="true"] #nav-bar{ padding-left: 96px !important; padding-right: 0px !important; }
+  }
+  
+  /* 1px margin on touch density causes tabs to be too high */
+  .tab-close-button{ margin-top: 0 !important }
+  
+  /* Make opened urlbar overlay the toolbar */
+  #urlbar[open]:focus-within{ min-width: var(--uc-urlbar-min-width,none) !important; }
+  
+  /* Hide dropdown placeholder */
+  #urlbar-container:not(:hover) .urlbar-history-dropmarker{ margin-inline-start: -28px; }
+  
+  /* Fix customization view */
+  #customization-panelWrapper > .panel-arrowbox > .panel-arrow{ margin-inline-end: initial !important; }
+ /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/navbar_tabs_responsive_oneliner.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Make tabs and navbar appear side-by-side tabs on right */
+
+/* Use page_action_buttons_on_hover.css to hide page-action-buttons to save more space for the address */
+
+/* Toolbars will be shown normally if window width goes below the value below */
+
+
+
+/* Modify it to suit your needs */
+@media screen and (min-width: 1100px){
+
+    :root[uidensity="compact"]{
+      --tab-block-margin: 2px !important;
+      }
+    
+    /* Modify these to change relative widths or default height */
+    #navigator-toolbox{
+      --uc-navigationbar-width: 40vw;
+      --uc-toolbar-height: 40px;
+      --uc-urlbar-min-width: 50vw; /* minimum width for opened urlbar */
+    }
+  
+    #scrollbutton-up,
+    #scrollbutton-down{ border-block-width: 2px !important; }
+    
+  /* prevent urlbar overflow on narrow windows */
+  /* Dependent on how many items are in navigation toolbar ADJUST AS NEEDED */
+    @media screen and (max-width: 1500px){
+      #urlbar-container{ min-width:unset !important }
+    }
+  
+    /* Override for other densities */
+    :root[uidensity="compact"] #navigator-toolbox{ --uc-toolbar-height: 34px; }
+    :root[uidensity="touch"] #navigator-toolbox{ --uc-toolbar-height: 44px; }
+  
+    #TabsToolbar{
+      margin-left: var(--uc-navigationbar-width);
+      --tabs-navbar-shadow-size: 0px;
+    }
+    #tabbrowser-tabs{
+    --tab-min-height: calc(var(--uc-toolbar-height) - 2 * var(--tab-block-margin,0px)) !important;
+  }
+    
+    /* This isn't useful when tabs start in the middle of the window */
+    .titlebar-spacer[type="pre-tabs"]{ display: none }
+    
+    #navigator-toolbox > #nav-bar{
+      margin-right:calc(100vw - var(--uc-navigationbar-width));
+      margin-top: calc(0px - var(--uc-toolbar-height));
+    }
+  
+    /* Window drag space  */
+    :root[tabsintitlebar="true"] #nav-bar{ padding-left: 24px !important }
+  
+  /* Rules specific to window controls on right layout */
+    @supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
+      .titlebar-buttonbox-container{ position: fixed; display: block; left: 0px; z-index: 3; }
+      :root[tabsintitlebar="true"] #nav-bar{ padding-left: 96px !important; padding-right: 0px !important; }
+    }
+  
+    /* 1px margin on touch density causes tabs to be too high */
+    .tab-close-button{ margin-top: 0 !important }
+  
+    /* Make opened urlbar overlay the toolbar */
+    #urlbar[open]:focus-within{ min-width: var(--uc-urlbar-min-width,none) !important; }
+  
+    /* Hide dropdown placeholder */
+    #urlbar-container:not(:hover) .urlbar-history-dropmarker{ margin-inline-start: -28px; }
+    
+  }
+  /* Fix customization view */
+  #customization-panelWrapper > .panel-arrowbox > .panel-arrow{ margin-inline-end: initial !important; }
