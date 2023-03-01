@@ -7,6 +7,7 @@
 
 * In "userChrome.css", I adapted the pop out menus to the catppuccin theme, I also add more padding to make them "nicer".
 * I tried to bring back the old looks, as I found it to be much more aesthetically pleasing than Proton.
+* Put [Khue Doan's userChrome.css](https://github.com/khuedoan/one-line-firefox/blob/master/userChrome.css) in the chrome folder
 
 
 
