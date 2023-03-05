@@ -1,4 +1,4 @@
-/*** BEGIN set homepage wallpaper ***/
+/*** Set homepage wallpaper ***/
 
 
 
@@ -42,10 +42,8 @@
     }
 } 
 
-/*** END Set homepage wallpaper ***/
 
-/*** BEGIN Hide scrollbar ***/
+/*** Hide scrollbar ***/
 html {
     scrollbar-width: none;
  }
-/*** END Hide scrollbar ***/
