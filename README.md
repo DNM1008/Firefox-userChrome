@@ -3,9 +3,11 @@
 
 **Preview**
 * If your monitor is wider than 1080px: 
- ![image](https://user-images.githubusercontent.com/54259825/222951635-3b9af30f-e873-4fca-81ec-1df57c506247.png)
+![image](https://github.com/DNM1008/Firefox-userChrome/assets/54259825/3a3dbf9e-aa41-47f6-aec3-54b0e12d87fc)
+
 * If it's vertical (less than 1080px wide): 
- ![image](https://user-images.githubusercontent.com/54259825/222951651-71a13212-f19f-4803-b9c9-766583a85ec8.png)
+![image](https://github.com/DNM1008/Firefox-userChrome/assets/54259825/427aa074-2eb3-4928-9b3e-27d1fe33a8ca)
+
 
 **Installation**
 * Go to `%APPDATA\Mozilla\Firefox\Profiles\<your profile name>\chrome`
