@@ -23,4 +23,4 @@
 * Almost all of the code was either found online or was my edition of code I found online, if you want me to credit you, please get in touch. If you want to use what I have here for any reason, feel free to do so.**
  * [Catppuccin](https://github.com/catppuccin/catppuccin)
  * [MrOtherGuy Firefox hacks](https://github.com/MrOtherGuy/firefox-csshacks)
- * [Redundakitties colorful-minimalist](https://github.com/Redundakitties/colorful-minimalist)https://github.com/Redundakitties/colorful-minimalist)
+ * [Redundakitties colorful-minimalist](https://github.com/Redundakitties/colorful-minimalist)
