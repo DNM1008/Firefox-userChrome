@@ -15,9 +15,12 @@
 * Go to `%APPDATA\Mozilla\Firefox\Profiles\<your profile name>\chrome`
   * Go to about://support if you don't know your profile name
 * Copy and paste the css files and the folders there, if there is no chrome folder, create one
+* Install ![Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/)
+* Copy the content of sidebery.css into sidebery's style editor
 
 
 # Disclaimer
-**Almost all of the code was either found online or was my edition of code I found online, if you want me to credit you, please get in touch. If you want to use what I have here for any reason, feel free to do so.**
+* Almost all of the code was either found online or was my edition of code I found online, if you want me to credit you, please get in touch. If you want to use what I have here for any reason, feel free to do so.**
+ * [Catppuccin](https://github.com/catppuccin/catppuccin)
  * [MrOtherGuy Firefox hacks](https://github.com/MrOtherGuy/firefox-csshacks)
-* [Redundakitties colorful-minimalist]([https://github.com/newmanls/OnelineProton](https://github.com/Redundakitties/colorful-minimalist)https://github.com/Redundakitties/colorful-minimalist)
+ * [Redundakitties colorful-minimalist]([https://github.com/newmanls/OnelineProton](https://github.com/Redundakitties/colorful-minimalist)https://github.com/Redundakitties/colorful-minimalist)
