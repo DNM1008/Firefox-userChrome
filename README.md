@@ -3,7 +3,8 @@
 
 **Preview**
 * If your monitor is wider than 1080px: 
-![image](https://github.com/DNM1008/Firefox-userChrome/assets/54259825/08d90341-2521-4d20-80e5-7e86379677de)
+![image](https://github.com/DNM1008/Firefox-userChrome/assets/54259825/4efd4d7e-1c96-4e42-9152-da65e3e64961)
+
 
 
 * If it's vertical (less than 1080px wide): 
